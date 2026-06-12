@@ -1,0 +1,154 @@
+.app-shell {
+  width: min(980px, calc(100% - 2rem));
+  margin: 2rem auto 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.hero {
+  color: #f8f2ec;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  background:
+    radial-gradient(
+      circle at 80% 0%,
+      rgba(255, 209, 102, 0.24),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 0% 100%,
+      rgba(118, 167, 255, 0.22),
+      transparent 45%
+    ),
+    linear-gradient(155deg, #0b1f3a 0%, #0d3b66 52%, #7d4f50 100%);
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: #ffd57a;
+}
+
+.subtitle {
+  margin: 0;
+  color: #e9eef3;
+  max-width: 60ch;
+}
+
+.panel {
+  background: #fff;
+  border: 1px solid #d7dde5;
+  border-radius: 1rem;
+  padding: 1.25rem;
+  box-shadow: 0 12px 24px -20px rgba(15, 40, 70, 0.65);
+}
+
+.sentence-form {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem 1rem;
+}
+
+.form-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.sentence-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  color: #1f2937;
+  font-size: 0.95rem;
+}
+
+.sentence-form button {
+  grid-column: 1 / -1;
+  margin-top: 0.4rem;
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.82rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #e57c23, #f4a259);
+  color: #1f1509;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.sentence-form button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 16px -8px rgba(229, 124, 35, 0.8);
+}
+
+.sentence-form button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.sentence-form select {
+  border: 1px solid #b6c1ce;
+  background: #f9fbfd;
+  border-radius: 0.65rem;
+  padding: 0.6rem 0.7rem;
+  font-size: 0.95rem;
+}
+
+.sentence-form select:focus-visible,
+.sentence-form button:focus-visible {
+  outline: 3px solid rgba(244, 162, 89, 0.45);
+  outline-offset: 1px;
+}
+
+.status {
+  margin: 0;
+  color: #334155;
+}
+
+.status-error {
+  color: #9f1239;
+}
+
+.error-text {
+  color: #9f1239;
+  font-size: 0.83rem;
+}
+
+.result-panel {
+  min-height: 9rem;
+}
+
+.sentence {
+  margin-top: 0.75rem;
+  margin-bottom: 0.45rem;
+  font-size: clamp(1.3rem, 2vw, 1.8rem);
+  color: #0b1f3a;
+}
+
+.result-meta {
+  margin: 0;
+  color: #334155;
+}
+
+@media (max-width: 720px) {
+  .app-shell {
+    width: min(980px, calc(100% - 1rem));
+    margin: 1rem auto 2rem;
+  }
+
+  .hero,
+  .panel {
+    padding: 1rem;
+  }
+
+  .sentence-form {
+    grid-template-columns: 1fr;
+  }
+}
