@@ -51,8 +51,9 @@ class ApiError extends Error {
 
 const jsonHeaders = {
   'Content-Type': 'application/json',
+   'x-api-key': import.meta.env.VITE_API_KEY?.trim() || '',
 }
-
+console.log("api key" + jsonHeaders["x-api-key"]);
 async function fetchJson<T>(path: string, init?: RequestInit): Promise<T> {
   const response = await fetch(`${API_BASE_URL}${path}`, {
     ...init,
