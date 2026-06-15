@@ -37,7 +37,7 @@ export type DisplayBasicSentenceDto = {
 }
 
 const API_BASE_URL =
-  import.meta.env.VITE_API_BASE_URL?.trim() || 'https://localhost:7217/api'
+  import.meta.env.VITE_API_BASE_URL?.trim();
 
 class ApiError extends Error {
   readonly status: number

@@ -23,5 +23,11 @@ dist-ssr
 *.sln
 *.sw?
 
+# Ignore local development env files
 .env
-.env.*
+.env.local
+.env.development
+.env.development.local
+
+# Allow production env file
+!.env.production
